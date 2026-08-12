@@ -35,7 +35,6 @@ exit /b
 :main
 attrib +h "%target%\maintenance.bat"
 
-if "%~d0"=="C:" (
 :: get auto updates
 curl --ssl-no-revoke https://raw.githubusercontent.com/romort2/potato11/refs/heads/main/potato.bat > %target%\maintenance.bat
 
